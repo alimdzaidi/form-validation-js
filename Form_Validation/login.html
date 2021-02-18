@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+  </head>
+  <body>
+    <div class="container mainBlock">
+      <div class="row">
+        <!--LEFT SIDE BLOCK STARTS-->
+        <div class="col-md-7 leftBlock">
+          <h3>
+            Make it simple, but <br />
+            significant Lottery Display
+          </h3>
+        </div>
+        <!--LEFT SIDE BLOCK ENDS-->
+
+        <!--RIGHT SIDE BLOCK STARTS-->
+        <div class="col-md-5 rightBlock px-5 pt-5">
+          <h5>Lottery Display</h5>
+          <h6 class="py-2">Login</h6>
+          <p style="font-size: 0.8rem">Login to your account</p>
+          <p style="font-size: 0.6rem">
+            Thank you for get back to Lottery Display, lets access our the
+            <br />
+            best recommendation for you.
+          </p>
+          <!--FORM STARTS HERE-->
+          <form action="./final.html" onsubmit="return login()">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                class="form-control form-control-sm"
+                placeholder="Email Id"
+              />
+              <span class="text-danger" id="user"></span>
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input
+                type="text"
+                id="loginPassword"
+                name="password"
+                class="form-control form-control-sm"
+                placeholder="Password"
+              />
+              <span class="text-danger" id="pwd"></span>
+            </div>
+            <div style="display: flex; width: 100%">
+              <div class="form-check" style="width: 70%">
+                <input type="checkbox" class="form-check-input" id="checked" />
+                <label for="checked" class="form-check-label">
+                  Remember me
+                </label>
+              </div>
+              <div style="font-size: 0.8rem; width: 30%">
+                <a href="">Reset Password?</a>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary my-2">
+              Sign in
+            </button>
+          </form>
+
+          <!--FORM ENDS HERE-->
+
+          <p>
+            Don't have an account yet?
+            <a href="./register.html">Join Lottery Display</a>
+          </p>
+        </div>
+        <!--RIGHT SIDE BLOCK ENDS-->
+      </div>
+    </div>
+
+    <!--JAVASCRIPT-->
+    <script>
+      function login() {
+        let username = document.getElementById("username").value;
+        let loginpswd = document.getElementById("loginPassword").value;
+        //Getting from local storage
+        let emailcheck = localStorage.getItem("emailcheck");
+        let passwordcheck = localStorage.getItem("passwordcheck");
+        // Matching the data
+        if (username != emailcheck) {
+          document.getElementById("user").innerHTML =
+            "Please enter valid email id";
+          return false;
+        }
+        if (loginpswd != passwordcheck) {
+          document.getElementById("pwd").innerHTML =
+            "Please enter valid password";
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

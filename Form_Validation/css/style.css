@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(1, 179, 238) !important;
+  font-family: sans-serif;
+}
+/*REGISTER PAGE*/
+.leftSide {
+  background-color: rgb(9, 108, 255);
+  margin-left: 0;
+  height: 85vh;
+}
+.leftSide p:nth-child(1) {
+  color: white;
+  font-weight: bold;
+}
+.leftSide p:nth-child(2) {
+  color: white;
+  font-size: 1.5rem;
+}
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+.rightSide {
+  background-color: white;
+  height: 85vh;
+}
+.form-check-label {
+  font-size: 0.7rem;
+  color: grey;
+}
+.form-group label {
+  font-size: 0.9rem;
+}
+
+/* LOGIN PAGE  */
+.leftBlock {
+  background-image: url("../images/lottery.jpg");
+  background-size: cover;
+  height: 80vh;
+  width: 100vw;
+  opacity: 90%;
+}
+.leftBlock h3 {
+  color: white;
+  margin-top: 400px;
+  margin-left: 50px;
+  text-shadow: 1px 2px 3px black;
+}
+.mainBlock {
+  height: 80vh;
+  margin: 60px 0;
+}
+.rightBlock {
+  background-color: white;
+}
